@@ -1,7 +1,8 @@
 package com.kodilla.games;
 
-public class Main {
+public class TicTacToe {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Game game = new Game();
+        game.play();
     }
 }
