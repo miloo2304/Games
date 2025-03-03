@@ -66,6 +66,17 @@ public class Board {
         }
     }
 
+    public boolean isCellAvailable(int row, int col) {
+        // Sprawdzenie, czy podane współrzędne są w dopuszczalnym zakresie
+        if (row < 0 || row >= 3 || col < 0 || col >= 3) {
+            throw new IllegalArgumentException("Invalid Input: (0-2)");
+        }
+
+        // Jeśli wartość wynosi 0, komórka jest dostępna
+        return board[row][col] == 0;
+    }
+
+
     private char mapIntToChar(int value) {
         return switch (value) {
             case 1 -> 'X';

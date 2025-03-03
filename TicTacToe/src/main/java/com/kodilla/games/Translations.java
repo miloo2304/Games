@@ -2,10 +2,10 @@ package com.kodilla.games;
 
 public class Translations {
 
-    private static String currentLanguage = "EN";
+    private static String currentLanguage = "EN"; // Domyślny język
 
     public static void setLanguage(String language) {
-        currentLanguage = language;
+        currentLanguage = language.toUpperCase(); // Zawsze ustawiaj na wielkie litery
     }
 
     public static String translate(String message) {
@@ -27,6 +27,11 @@ public class Translations {
                 case "Choose language (1/2): " -> "Wybierz język (1/2): ";
                 case "Invalid input. Please enter a valid number (1 or 2)." -> "Nieprawidłowe dane. Podaj poprawną liczbę (1 lub 2).";
                 case "Invalid choice. Please choose 1 or 2." -> "Nieprawidłowy wybór. Wybierz 1 lub 2.";
+                case "Computer chooses row" -> "Komputer wybiera wiersz";
+                case "col" -> "kolumnę";
+                case "Player vs Computer" -> "Gracz vs Komputer";
+                case "Player vs Player" -> "Gracz vs Gracz";
+                case "Choose mode (1/2): " -> "Wybierz tryb gry (1/2): ";
                 default -> message;
             };
             default -> switch (message) {
@@ -42,10 +47,15 @@ public class Translations {
                 case "Input must be between 0 and 2." -> "Input must be between 0 and 2.";
                 case "Invalid input. Please, try type again." -> "Invalid input. Please, try type again.";
                 case "1. English" -> "1. English";
-                case "2. Polski" -> "2. Polish";
+                case "2. Polski" -> "2. Polski";
                 case "Choose language (1/2): " -> "Choose language (1/2): ";
                 case "Invalid input. Please enter a valid number (1 or 2)." -> "Invalid input. Please enter a valid number (1 or 2).";
                 case "Invalid choice. Please choose 1 or 2." -> "Invalid choice. Please choose 1 or 2.";
+                case "Computer chooses row" -> "Computer chooses row";
+                case "col" -> "col";
+                case "Player vs Computer" -> "Player vs Computer";
+                case "Player vs Player" -> "Player vs Player";
+                case "Choose mode (1/2): " -> "Choose mode (1/2): ";
                 default -> message;
             };
         };
